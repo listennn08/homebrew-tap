@@ -12,8 +12,11 @@ cask "claude-panes" do
   app "Claude Panes.app"
 
   # The build is only ad-hoc signed, so Gatekeeper would refuse the downloaded copy; drop the quarantine flag.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Claude Panes.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "#{appdir}/Claude Panes.app"],
+        writable_paths: ["#{appdir}/Claude Panes.app"],
+        must_succeed:   false
   end
 
   caveats <<~EOS
