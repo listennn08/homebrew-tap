@@ -22,8 +22,8 @@ cask "claude-panes" do
   end
 
   zap trash: [
-    "~/Library/Caches/com.botrista.claude-panes",
-    "~/Library/WebKit/com.botrista.claude-panes",
+    "~/Library/Caches/com.listennn08.claude-panes",
+    "~/Library/WebKit/com.listennn08.claude-panes",
   ]
 
   caveats <<~EOS
