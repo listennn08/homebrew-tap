@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "claude-panes" do
-  version "0.2.0"
-  sha256 "46b55858949eb96f52956db250afaab0fa2097036deead0f3bee1cb4e46db298"
+  version "0.3.0"
+  sha256 "4ef5f25688f933e9c816248f3f1f140333d781ae2508018bf054fd451a005431"
 
   url "https://github.com/listennn08/homebrew-tap/releases/download/claude-panes-v#{version}/Claude-Panes-#{version}-arm64.zip"
   name "Claude Panes"
