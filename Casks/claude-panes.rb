@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 cask "claude-panes" do
   version "0.2.0"
   sha256 "46b55858949eb96f52956db250afaab0fa2097036deead0f3bee1cb4e46db298"
@@ -14,17 +16,17 @@ cask "claude-panes" do
   # The build is only ad-hoc signed, so Gatekeeper would refuse the downloaded copy; drop the quarantine flag.
   postflight_steps do
     run "/usr/bin/xattr",
-        args:           ["-dr", "com.apple.quarantine", "#{appdir}/Claude Panes.app"],
-        writable_paths: ["#{appdir}/Claude Panes.app"],
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Claude Panes.app"],
+        writable_paths: ["{{appdir}}/Claude Panes.app"],
         must_succeed:   false
   end
-
-  caveats <<~EOS
-    Claude Panes drives the Claude Code CLI: install and log in to `claude` first.
-  EOS
 
   zap trash: [
     "~/Library/Caches/com.botrista.claude-panes",
     "~/Library/WebKit/com.botrista.claude-panes",
   ]
+
+  caveats <<~EOS
+    Claude Panes drives the Claude Code CLI: install and log in to `claude` first.
+  EOS
 end
