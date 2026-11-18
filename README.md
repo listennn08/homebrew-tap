@@ -17,6 +17,7 @@ Upgrade with `brew upgrade --cask claude-panes`, remove with `brew uninstall --c
 A lightweight MongoDB GUI (macOS, Apple silicon): mongo-shell filters, mongosh commands and SQL queries, with saved connections in the Keychain.
 
 ```sh
+brew trust --cask listennn08/tap/rustle   # Homebrew 7+: allow this third-party cask once
 brew install --cask listennn08/tap/rustle
 ```
 
