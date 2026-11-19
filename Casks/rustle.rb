@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "rustle" do
-  version "0.1.0"
-  sha256 "36c6caae52234d1a81679fa86464f0213ec70c2a2a8192eb7035938b8de0619b"
+  version "0.2.0"
+  sha256 "54c00a1795785d105bad2d74117743e8d06a357ec43089d944ce9846545cb3ff"
 
   url "https://github.com/listennn08/homebrew-tap/releases/download/rustle-v#{version}/Rustle-#{version}-arm64.zip"
   name "Rustle"
